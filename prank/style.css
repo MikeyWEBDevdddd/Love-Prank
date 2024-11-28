@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+/* Dark overlay */
+.overlay {
+    position: absolute; /* Position it above the image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark transparent black overlay */
+    z-index: 1; /* Make sure overlay is above the background image */
+}
+.container {
+    position: relative;
+    z-index: 2; /* Ensure the content is on top of the overlay */
+    color: white; /* Make text white so it stands out against the dark overlay */
+    text-align: center;
+    padding: 50px;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.buttons {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: all 0.3s ease;
+    padding: 15px 25px;
+    margin: 15px;
+}
+
+#yes-btn {
+    background-color: #fa6aff;
+    color: rgb(20, 19, 19);
+}
+
+#yes-btn:hover {
+    background-color: #ef72fa;
+}
+
+#no-btn {
+    background-color: #ff1100;
+    color: rgb(17, 16, 16);
+    position: absolute; /* Make sure the button can move */
+    pointer-events: auto; /* Keep button clickable for movement */
+    transition: top 0.3s, left 0.3s; /* Smooth movement */
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup-content p {
+    font-size: 2rem;
+    color: rgb(255, 0, 221);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 0, 200), 0 0 5px rgb(247, 7, 255);
+    font-weight: bolder;
+}
+
+#close-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#close-btn:hover {
+    background-color: #45a049;
+}
